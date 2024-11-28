@@ -1,13 +1,15 @@
-function scrollLeft() {
-    document.querySelector('.product-grid').scrollBy({
-        left: -220,
-        behavior: 'smooth'
-    });
-}
+document.addEventListener("DOMContentLoaded", () => {
+    const productGrid = document.querySelector(".product-grid");
+    const scrollLeft = document.querySelector(".scroll-button.left");
+    const scrollRight = document.querySelector(".scroll-button.right");
 
-function scrollRight() {
-    document.querySelector('.product-grid').scrollBy({
-        left: 220,
-        behavior: 'smooth'
+    // Scroll left button
+    scrollLeft.addEventListener("click", () => {
+        productGrid.scrollBy({ left: -300, behavior: "smooth" });
     });
-}
+
+    // Scroll right button
+    scrollRight.addEventListener("click", () => {
+        productGrid.scrollBy({ left: 300, behavior: "smooth" });
+    });
+});
