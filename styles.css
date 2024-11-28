@@ -9,7 +9,7 @@
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #e0e0e0;
-    background-color: #121212;
+    background-color: #EDDFE0;
   }
   
   /* Header and Navigation */
@@ -96,85 +96,139 @@
   }
   
   #hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
+    color: black;
   }
   
   #hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
   }
   
   .cta-button {
     display: inline-block;
-    background-color: #4a4a4a;
+    background-color: #705C53;
     color: #ffffff;
     padding: 0.8rem 2rem;
     border-radius: 5px;
     font-size: 1.1rem;
+    border-radius: 20px;
     transition: background-color 0.3s ease;
   }
   
   .cta-button:hover {
-    background-color: #5a5a5a;
+    background-color: #F5f5f7;
+    color: black;
   }
   
   /* Featured Products */
   #featured-products {
     max-width: 1200px;
-
-    margin: 4rem auto;
-    padding: 0 2rem;
-    background-color: #1e1e1e;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    background-color: #EDDFE0;
   }
-  
+  img{
+    margin-top: 10px;
+    border-radius: 20px;
+  }
   #featured-products h2 {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 2rem;
     font-size: 2rem;
     padding-top: 30px;
-  }
-  
-  .product-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 15px;
-    gap: 25px;
+    color: black;
   }
   
   .product-card {
     flex: 0 0 auto;
     width: 350px;
     height: 400px;
-    background-color: #989898ad;
-    border: 4px solid rgb(180, 103, 103);
+    background-color: #705c53;
+    border: 4px solid rgb(36, 36, 36);
     border-radius: 20px;
     padding: 10px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-size: 20px;
   }
+ 
   
-  .scroll-button {
-    position: absolute;
-    transform: translateY(-300px);
-    background-color: #ffffff;
-    color: #ff0000;
-    border: none;
+  .product-card .shbutton{
+    background-color: #EDDFE0;
+    height: 65px;
+    width: 145px;
     padding: 10px;
+    border-radius: 25px;
+    color: black;
+  }
+  .product-card .shbutton:hover{
+    
+    background-color: black;
+    color: white;
+  }
+  /* Scroll Container */
+.scroll-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden; /* Hide overflow for the scrolling effect */
+}
+
+/* Product Grid */
+.product-grid {
+    display: flex;
+    gap: 25px;
+    overflow-x: scroll; /* Horizontal scroll */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    padding: 10px;
+    scrollbar-width: none; /* Hide scrollbar (for Firefox) */
+}
+
+.product-grid::-webkit-scrollbar {
+    display: none; /* Hide scrollbar (for Webkit) */
+}
+
+/* Scroll Buttons */
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #705c53;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
     cursor: pointer;
-  }
-  
-  .scroll-button.left {
-    left: 10px;
-  }
-  
-  .scroll-button.right {
-    right: 10px;
-  }
-  
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-button:hover {
+    background-color: #F5F5F7;
+    color: black;
+}
+
+/* Left and Right Button Positions */
+.scroll-button.left {
+    transform: translateX(50%);
+    left: -20px;
+}
+
+.scroll-button.right {
+    transform: translateX(-50%);
+    right: -20px;
+}
+
   /* Footer */
   footer {
     background-color: #1e1e1e;
